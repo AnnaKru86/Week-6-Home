@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        width: 1440px;
+        height: 100vh;
+        border: 1px solid red;
+        gap: 30px;
+    }
+
+    .nav {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 1/2;
+        grid-template-columns: 150px 150px 150px 150px 150px;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        align-items: center;
+        width: 1440px;
+        border: 1px solid red;
+        color: #323232;
+    }
+
+    a.menu1,
+    a.menu2,
+    a.menu3,
+    a.menu4 {
+        font-family: 'Open Sans';
+        font-weight: 400px;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 21px;
+        color: #323232;
+        text-decoration: none;
+        justify-items: center;
+        align-items: center;
+        border: 1px solid red;
+    }
+
+    a.menu1 {
+        padding-left: 40px;
+    }
+
+    h1 {
+        font-family: 'Tenor Sans';
+        font-weight: 400px;
+        font-size: 48px;
+        font-style: normal;
+        line-height: 72px;
+        justify-self: center;
+        align-self: end;
+        color: #F6F6F6;
+    }
+
+    h2 {
+        order: -1;
+        justify-self: center;
+        align-self: end;
+        font-family: 'Tenor Sans';
+        font-weight: 400px;
+        font-size: 48px;
+        font-style: normal;
+        line-height: 72px;
+        color: #F6F6F6;
+    }
+
+    h3 {
+        order: -2;
+        justify-self: center;
+        align-self: end;
+        font-family: 'Open Sans';
+        font-weight: 400px;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 24px;
+        color: #F6F6F6;
+    }
+
+    #button {
+        color: #715B4B;
+        font-weight: bolder;
+        font-family: 'Open Sans';
+        font-weight: 700px;
+        font-size: 16px;
+        line-height: 24px;
+        width: 328px;
+        height: 60px;
+        left: 556px;
+        top: 643px;
+        background-color: #F6F6F6;
+    }
+
+    .main1 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 2/3;
+        height: 639px;
+        width: 1440px;
+        border: 1px solid red;
+        grid-template-rows: 30% 30% 10% 10%;
+        justify-items: center;
+        align-items: center;
+        color: #F6F6F6;
+        background-image: url('/week 6/assets 6/Background-foto.png');
+    }
+
+    h4,
+    h5 {
+        color: #57463A;
+        font-family: 'Tenor Sans';
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 72px;
+        width: 533px;
+        height: 72px;
+        left: 134px;
+        top: 941px;
+        margin-left: 134px;
+    }
+
+    .h4 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 3/4;
+        height: 232px;
+        width: 1440px;
+        border: 1px solid red;
+        justify-items: center;
+        align-items: start;
+        width: 533px;
+        height: 72px;
+        left: 134px;
+        top: 941px;
+        margin-left: 134px;
+    }
+
+    .main2 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 4/5;
+        height: 250px;
+        width: 1080px;
+        border: 1px solid red;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat (2, fr);
+        margin-left: 140px;
+        margin-right: 220px;
+    }
+
+    .h5 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 5/6;
+        height: 232px;
+        width: 1440px;
+        border: 1px solid red;
+        width: 496px;
+        height: 72px;
+        left: 134px;
+        top: 2704px;
+    }
+
+    #headline1,
+    #headline2,
+    #headline3,
+    #headline4,
+    #headline5,
+    #headline6 {
+        color: #323232;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: underline #715B4B 1px;
+        margin-left: 10px;
+    }
+
+    #details {
+        font-family: 'Open Sans';
+        font-weight: 400px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #323232;
+        margin-left: 10px;
+    }
+
+    .main3 {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 6/7;
+        width: 1158px;
+        border: 1px solid red;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, fr);
+        margin-left: 140px;
+    }
+
+    .stage1,
+    .stage2,
+    .stage3,
+    .stage4,
+    .stage5,
+    .stage6 {
+        border: 1px solid #000000;
+    }
+
+    #number {
+        display: grid;
+        justify-self: end;
+        align-self: start;
+        text-align: right;
+        font-family: 'Tenor Sans';
+        font-weight: 400px;
+        font-size: 48px;
+        line-height: 72px;
+        margin-top: 10px;
+    }
+
+    #point {
+        font-family: 'Open Sans';
+        font-weight: 300px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .footer {
+        display: grid;
+        grid-column: 1/6;
+        grid-row: 7/8;
+        grid-template-columns: 450px 150px 90px 300px 230px;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        height: 380px;
+        width: 1440px;
+        border: 1px solid red;
+        background-color: #715B4B;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300px;
+        font-size: 16px;
+        color: #F6F6F6;
+        margin-top: 50px;
+
+    }
+
+    a.link,
+    a.link:active,
+    a.link:hover {
+        text-decoration: none;
+        color: #F6F6F6;
+        font-family: 'Open Sans';
+        font-weight: 300px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .INN {
+        margin-left: 140px;
+        line-height: 15px;
+        padding-top: 10px;
+        font-family: 'Open Sans';
+        font-weight: 300px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+
+    .master {
+        padding-top: 20px;
+        line-height: 33px;
+    }
+
+
+    .Contacts {
+        padding-top: 20px;
+        line-height: 33px;
+    }
+
+    .Contract {
+
+        padding-top: 22px;
+        line-height: 33px;
+    }
+
+    .Icons {
+
+        padding-top: 30px;
+        justify-self: end;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div><a class="menu1" href="master.html">Мастер классы</a></div>
+            <div><a class="menu2" href="Furniture.html">Мебель на заказ</a></div>
+            <div><img id="Logo" src="/week 6/assets 6/Logo.svg" alt="Логотип"></div>
+            <div><a class="menu3" href="Contacts.html">Контакты</a></div>
+            <div><a class="menu4" href="About.html">О нас</a></div>
+        </nav>
+    </header>
+    <main>
+        <div class="main1">
+            <h1>NIKASON BREND</h1>
+            <h2>Столярная мастерская</h2>
+            <h3>Воплотим вашу любую задумку в реальность</h3>
+            <button id="button">Заказать мебель</button>
+        </div>
+        <h4 id="heading4">Почему выбирают нас</h4>
+        <div class="main2">
+            <div class="item1">
+                <p id="headline1"> Давно на рынке</p>
+                <p id="details">Опыт работы на рынке более 10 лет</p>
+            </div>
+            <div class="item2">
+                <p id="headline2">Гарантия качества</p>
+                <p id="details">Предоставляем гарантию 12 месяцевна изделия</p>
+            </div>
+            <div class="item3">
+                <p id="headline3">Юридическая прозрачность</p>
+                <p id="details">Заключаем с каждым клиентом договор</p>
+            </div>
+            <div class="item4">
+                <p id="headline4"> Экологичность</p>
+                <p id="details">Мебель из натуральной древесины, краски без токсичного состава</p>
+            </div>
+            <div class="item5">
+                <p id="headline5">Эксклюзивность</p>
+                <p id="details">Каждая мебель изготовлена по индивидуальному дизайну</p>
+            </div>
+            <div class="item6">
+                <p id="headline6">Долговечность</p>
+                <p id="details">Мебель из натурального массива прослужит даже вашим детям</p>
+            </div>
+        </div>
+        <h5 id="heading4">Этапы производства</h5>
+        <div class="main3">
+            <div class="stage1">
+                <p id="number">1</p>
+                <p id="point">Встреча с клиентом</p>
+            </div>
+            <div class="stage2">
+                <p id="number">2</p>
+                <p id="point">Подписание договора, внесение предоплаты</p>
+            </div>
+            <div class="stage3">
+                <p id="number">3</p>
+                <p id="point">Выезд к клиенту на замер (при необходимости)</p>
+            </div>
+            <div class="stage4">
+                <p id="number">4</p>
+                <p id="point">Составление проекта</p>
+            </div>
+            <div class="stage5">
+                <p id="number">5</p>
+                <p id="point">Изготовление и согласование всех стадий с клиентом</p>
+            </div>
+            <div class="stage6">
+                <p id="number">6</p>
+                <p id="point">Доставка и монтаж изделия (при необходимости)</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="INN">
+            <p>ИП Колодезников-Матчитов Н.И.</p>
+            <p>ИНН 143515646663</p>
+        </div>
+        <div class="master">
+            <a class="link" href="master.html">Мастер классы</a>
+            <a class="link" href="Furniture.html">Мебель на заказ</a>
+        </div>
+        <div class="Contacts">
+            <a class="link" href="Contacts.html">Контакты</a>
+            <a class="link" href="About.html">О нас</a>
+        </div>
+        <div class="Contract">
+            <a class="link" href="Privacypolicy.html">Политика конфиденциальности</a>
+            <a class="link" href="Contract.html">Договор оферты</a>
+        </div>
+        <div class="Icons">
+            <img src="/week 6/assets 6/icons/Instagram.svg" alt="Instagram">
+            <img src="/week 6/assets 6/icons/Whatsapp.svg" alt="Whatsapp">
+        </div>
+    </footer>
+</body>
+
+</html>
